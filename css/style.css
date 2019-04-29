@@ -8,28 +8,40 @@ nav {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #3b3b3b;
+
+    display:flex;
+    align-items: center;
   }
   
- a {
-    float: left;
-    border-right:1px solid #bbb;
+  .logo-deezer{
+    border-right: 1px solid #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #ffffff;
+    padding-right: 1em;
   }
-  
-a:last-child {
-    border-right: none;
+
+  .logo-deezer a {
+    color: #ffffff;
+    font-size: 2em;
+    text-decoration: none;
   }
-  
- a {
-    display: block;
+
+  .logo-deezer img{
+      width: 50px;
+      margin-top: 10px;
+  }
+ .menu a {
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
   
- a:hover:not(.active) {
-   // background-color: #111;
+  .menu a:last-child {
+    border-right: none;
   }
   
 .active {
@@ -43,7 +55,7 @@ a:last-child {
     padding: 2em 2em;
 
     display: flex;
-    align-items: normal;
+    align-items: center;
     justify-content: space-between;
   }
 
@@ -66,10 +78,15 @@ a:last-child {
       box-sizing: border-box;
       border: 2px solid #ccc;
       font-size: 16px;
+      background-image: url('../image/deezer-logo.png');
+      background-position: 10px 13px;
+      background-repeat: no-repeat;
+      background-size: 5%;
+      padding: 12px 20px 12px 40px;
   }
 
   label{
-      font-size:1.5em;
+      font-size:1.2em;
       margin: 1em 0em;
   }
 
@@ -82,7 +99,7 @@ a:last-child {
     background-color: #6a86bb;
     color:#ffffff;
     border: 2px solid #6a86bb;
-    padding: 0.5em 3em;
+    padding: 0.5em 1em;
   }
 
   .bouton1:hover{
@@ -91,3 +108,25 @@ a:last-child {
       color:#ffffff;
       cursor: pointer;
   }
+
+  h1{
+      font-size:1.5em;
+    margin-top: 2em;
+    margin-left:1.2em;
+}
+
+
+#results{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 400px;
+    justify-content: center;
+}
