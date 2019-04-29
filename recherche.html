@@ -10,15 +10,25 @@
         <nav>
             <a href="">Deezer Web</a>
             <a href="">Home</a>
-            <a href="">Rechercher</a>
+            <a class="active" href="">Rechercher</a>
             <a href="">Favoris</a>
         </nav>
     </header>
-
+   <h1>Rechercher</h1> 
     <form id="FormulaireRecherche">
-        <label for="recherche">Rechercher : </label><br>
-        <input class="champsRecherche" type="text" id="recherche" placeholder="Rechercher une musique"><br>
+        <label for="recherche">Titre</label>
+        <input class="champsRecherche" type="text" aria-label="Search" id="recherche" placeholder="Rechercher une musique">
 
+    <label for="recherche">Trier par</label>
+        <select>
+        <option value="Album">Album</option>
+        <option value="Artiste">Artiste</option>
+        <option value="Musique">Musique</option>
+        <option value="Les plus populaires">Les plus populaires</option>
+        <option value="Les mieux notés">Les mieux notés</option>
+      </select>
+
+      <br>
         <button type="submit" class="bouton1">Rechercher</button>
     </form>
 

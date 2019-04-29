@@ -27,49 +27,62 @@ a:last-child {
    // background-color: #111;
   }
   
-a:active,  a:focus {
-    background-color: #4CAF50;
+.active {
+    background-color: #6a86bb;
   }
 
 
   #FormulaireRecherche{
-    background: mistyrose;
+    background: rgba(106,134,187,0.1);
     margin: 2em 2em;
     padding: 2em 2em;
+
+    display: flex;
+    align-items: normal;
+    justify-content: space-between;
   }
 
   input[type=text] {
-    width: 100%;
+    width: 40%;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
     background-image: url('../image/loupe.png');
-    background-position: 5px 5px; 
+    background-position: 10px 10px;
     background-repeat: no-repeat;
-    background-size: 3%;
+    background-size: 5%;
     padding: 12px 20px 12px 40px;
   }
 
+  select{
+      width:30%;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      font-size: 16px;
+  }
+
   label{
-      font-size:2em;
+      font-size:1.5em;
       margin: 1em 0em;
   }
 
-  .bouton1, .champsRecherche{
+  .bouton1, .champsRecherche, select{
     margin: 1em 0em;
   }
 
   .bouton1{
     margin: 1em 0em;
-    background-color: #ffffff;
-    border: 2px solid #ffffff;
+    background-color: #6a86bb;
+    color:#ffffff;
+    border: 2px solid #6a86bb;
     padding: 0.5em 3em;
   }
 
   .bouton1:hover{
       background-color: #333333;
+      border: 2px solid #333333;
       color:#ffffff;
       cursor: pointer;
   }
