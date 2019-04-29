@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Rechercher votre musique</title>
-<link href="/media/examples/link-element-example.css" rel="./css/style.css">
+<link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,9 +17,13 @@
 
     <form id="FormulaireRecherche">
         <label for="recherche">Rechercher : </label><br>
-        <input class="champsRecherche" type="text" id="recherche" placeholder="Rechercher une musique">
+        <input class="champsRecherche" type="text" id="recherche" placeholder="Rechercher une musique"><br>
 
         <button type="submit" class="bouton1">Rechercher</button>
     </form>
+
+    <div id="results"></div>
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="./js/recherche.js"></script>
 </body>
 </html>

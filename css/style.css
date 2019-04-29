@@ -1,0 +1,75 @@
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+ a {
+    float: left;
+    border-right:1px solid #bbb;
+  }
+  
+a:last-child {
+    border-right: none;
+  }
+  
+ a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+ a:hover:not(.active) {
+   // background-color: #111;
+  }
+  
+a:active,  a:focus {
+    background-color: #4CAF50;
+  }
+
+
+  #FormulaireRecherche{
+    background: mistyrose;
+    margin: 2em 2em;
+    padding: 2em 2em;
+  }
+
+  input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('../image/loupe.png');
+    background-position: 5px 5px; 
+    background-repeat: no-repeat;
+    background-size: 3%;
+    padding: 12px 20px 12px 40px;
+  }
+
+  label{
+      font-size:2em;
+      margin: 1em 0em;
+  }
+
+  .bouton1, .champsRecherche{
+    margin: 1em 0em;
+  }
+
+  .bouton1{
+    margin: 1em 0em;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 0.5em 3em;
+  }
+
+  .bouton1:hover{
+      background-color: #333333;
+      color:#ffffff;
+      cursor: pointer;
+  }
