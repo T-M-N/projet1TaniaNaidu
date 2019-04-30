@@ -1,36 +1,51 @@
 const FormulaireRecherche = $('#FormulaireRecherche');
-let select = $("#select");
+const SelectBox = $('#selectBox');
+
+/*$(document).ready(function(){
+    $(".btn-favoris").click(function(){
+        $("span").text("Retirer du favoris");
+        alert("test");
+    });
+});*/
 
 FormulaireRecherche.on('submit', function(event) {
-    event.preventDefault();
-    
-    const recherche = FormulaireRecherche.find('#recherche');
-    const rechercheValeur = recherche.val();
+event.preventDefault();
 
-    let selectValeur = $( "select option:selected" ).val();
-    console.log(selectValeur);
+//INPUT DE RECHERCHE
+const recherche = FormulaireRecherche.find('#recherche');
+const rechercheValeur = recherche.val();
 
+//SELECT BOX
+const selectOption = SelectBox.find('option:selected');
+const selectValeur = selectOption.val();
+console.log(selectValeur);
+
+/*let favorisBTN = $('.btn-favoris');
+console.log(favorisBTN);*/
+
+const album = 
     $.ajax({
-        url : 'https://api.deezer.com/search?q='+rechercheValeur+'&order=RATING_ASC&output=jsonp',
+        url : 'https://api.deezer.com/search?q='+rechercheValeur+selectValeur+'&order=RATING_ASC&output=jsonp',
         dataType : 'jsonp'
     }).done(function(musiques) {
-    
+            
         console.log(musiques);
-    
-        document.querySelector('#results').innerHTML = 
-     /* "<p> Les titre : " + musiques.data.map(m => m.title)
-      + "</p><p> Les album : " + musiques.data.map(m => m.album.title) + "</p>";*/
 
-       musiques.data.map(
-            m => 
-            '<div class="main"><p class="album">'
-             + m.album.cover_big + '<br>'
-              + m.album.title + ' : ' + 
-              m.artist.name + '</p> <p class="preview">' + 
-              m.preview + '</p> </div>').join("<br>");
-    }
+        document.querySelector('#results').innerHTML = 
+
+        musiques.data.map(
+            m => '<div class="main"><p class="album">'
+                + '<img width="200px" src="'+ m.album.cover_big+ '"/>' + '<br>'
+                + m.artist.name + ' : <br>' 
+                + m.album.title + '</p> <br> <p class="preview">' 
+                + '<audio controls src="' + m.preview +'" ></audio></p> <br> <button class="btn-favoris"><i class="fas fa-heart"></i>  Ajouter au favoris</button></div>'
+                ).join("<br>");
+        }
+
     
     );
+
+
 });
 
 

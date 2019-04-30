@@ -26,12 +26,12 @@
         <input class="champsRecherche" type="text" aria-label="Search" id="recherche" placeholder="Rechercher un artiste, un album, un titre">
 
     <label for="recherche">Trier par</label>
-    <select id="select" name="select">
-        <option value="Album">Album</option>
-        <option value="Artiste">Artiste</option>
-        <option value="Musique">Musique</option>
-        <option value="Les plus populaires">Les plus populaires</option>
-        <option value="Les mieux notés">Les mieux notés</option>
+    <select id="selectBox" name="select">
+        <option value="ALBUM_DESC">Album</option>
+        <option value="ARTIST_DESC">Artiste</option>
+        <option value="TRACK_DESC">Musique</option>
+        <option value="RANKING">Les plus populaires</option>
+        <option value="RATING_DESC">Les mieux notés</option>
       </select>
 
       <br>
@@ -39,6 +39,7 @@
     </form>
 
     <div id="results"></div>
+
     <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="./js/recherche.js"></script>
 </body>

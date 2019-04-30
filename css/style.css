@@ -129,4 +129,16 @@ nav {
     align-items: flex-start;
     width: 400px;
     justify-content: center;
+    padding: 0.5em 0em;
+}
+
+.btn-favoris{
+    padding: 0.5em;
+    background: transparent;
+    border: 1px solid red;
+    color:red;
+}
+
+.btn-favoris .fa-heart{
+    color: red;
 }
