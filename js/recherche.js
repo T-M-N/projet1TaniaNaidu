@@ -1,3 +1,5 @@
+'user strict';
+
 const FormulaireRecherche = $('#FormulaireRecherche');
 const SelectBox = $('#selectBox');
 
@@ -31,15 +33,22 @@ event.preventDefault();
                             + '</p> <br> <p class="preview">' 
                             + '<audio controls src="'
                             + m.preview 
-                            +'" ></audio></p><br><button id="0" class="btn-favoris"><i class="fas fa-heart"></i>  <span class="text-favoris">Ajouter au favoris</span></button></div>'
+                            +'" ></audio></p><br><button class="btn-favoris"><i class="fas fa-heart"></i>  <span class="text-favoris">Ajouter au favoris</span></button><button class="btn-favoris display-favoris"><i class="fas fa-heart"></i>  <span class="text-favoris">Retirer au favoris</span></button></div>'
                             ).join("<br>");
 
                             //MODIFICATION TEXTE APRES CLICK
-                            $(".btn-favoris").click(function()
-                            {  $(this).html(' Retirer du favoris'); //console.log("test");
-                    });
-                }
-            );
+                   /* $(".btn-favoris").click(function(){  
+                             $(this).html(' Retirer du favoris'); //console.log("test");
+                    });*/
+                    
+            /*$(".btn-favoris").click(function(){ 
+                $(this).text(function(i, text){
+                    return text === "Ajouter aux favoris" ? "Retirer des favoris" : "Ajouter aux favoris";
+                });      
+                
+            });*/
+        }
+    );
 
 
 });
