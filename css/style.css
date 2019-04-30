@@ -21,6 +21,7 @@ nav {
     align-items: center;
     color: #ffffff;
     padding-right: 1em;
+    margin-right: 1em;
   }
 
   .logo-deezer a {
@@ -120,8 +121,8 @@ nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+   /* justify-content: center;
+    align-items: center;*/
 }
 .main{
     display: flex;
@@ -141,4 +142,13 @@ nav {
 
 .btn-favoris .fa-heart{
     color: red;
+}
+
+.display-favoris{
+    display:none;
+}
+
+.main, .album, .preview, .btn-favoris{
+    margin:auto;
+    text-align: center;
 }
