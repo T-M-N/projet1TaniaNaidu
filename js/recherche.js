@@ -22,7 +22,6 @@ console.log(selectValeur);
 
 /*let favorisBTN = $('.btn-favoris');
 console.log(favorisBTN);*/
-
 const album = 
     $.ajax({
         url : 'https://api.deezer.com/search?q='+rechercheValeur+'&order='+selectValeur+'&output=jsonp',
@@ -34,12 +33,20 @@ const album =
         document.querySelector('#results').innerHTML = 
 
         musiques.data.map(
-            m => '<div class="main"><p class="album">'
+
+           
+            m =>
+                '<div class="main"><p class="album">'
                 + '<img width="200px" src="'+ m.album.cover_big+ '"/>' + '<br>'
                 + m.artist.name + ' : <br>' 
                 + m.album.title + '</p> <br> <p class="preview">' 
-                + '<audio controls src="' + m.preview +'" ></audio></p> <br> <button class="btn-favoris"><i class="fas fa-heart"></i>  Ajouter au favoris</button></div>'
+                + '<audio controls src="' + m.preview +'" ></audio></p> <br> <button id="0" class="btn-favoris"><i class="fas fa-heart"></i>  <span class="text-favoris">Ajouter au favoris</span></button></div>'
                 ).join("<br>");
+
+                //MODIFICATION TEXTE APRES CLIC
+                $(".btn-favoris").click(function()
+                {  $('.text-favoris').html(' Retirer du favoris'); //console.log("test");
+            });
         }
 
     
