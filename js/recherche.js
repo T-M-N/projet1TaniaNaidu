@@ -25,7 +25,7 @@ console.log(favorisBTN);*/
 
 const album = 
     $.ajax({
-        url : 'https://api.deezer.com/search?q='+rechercheValeur+selectValeur+'&order=RATING_ASC&output=jsonp',
+        url : 'https://api.deezer.com/search?q='+rechercheValeur+'&order='+selectValeur+'&output=jsonp',
         dataType : 'jsonp'
     }).done(function(musiques) {
             
