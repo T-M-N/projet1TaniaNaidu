@@ -29,14 +29,15 @@ FormulaireRecherche.on('submit', function (event) {
 
             $(`<div class="container">
                     <div  class="main">
-                        <p class="album">
+                        <div class="album">
                             <img width="200px" src="${m.album.cover_big}"/><br>
                             <span class="nomArtiste">Artiste : ${m.artist.name}</span><br>
                             <span class="nomArtiste">Titre : ${m.title}</span><br>
                             <span class="nomArtiste">Album : ${m.album.title}</span><br>
-                            <p class="preview">
+                        </div>
+                         <div class="preview">
                                 <audio controls src="${m.preview}"></audio>
-                            </p><br>
+                        </div><br>
                             <button type="submit" class="btn-favoris">
                                 <i class="fas fa-heart"></i>
                                 <span class="text-favoris">Ajouter au favoris</span>
@@ -52,8 +53,9 @@ FormulaireRecherche.on('submit', function (event) {
 
 });
 
+
 $("#results").on("click", ".btn-favoris", function () {
-    ("vous avez ajouté une musique au favoris");
+
     let m = $(this).parents('.container').data('m');
 
     console.log('récupéré', m);
@@ -62,28 +64,22 @@ $("#results").on("click", ".btn-favoris", function () {
 
     if (localStorage.getItem('listM') == null) {
         alert("c'est vide");
+
         tab.push(m);
         localStorage.setItem('listM', JSON.stringify(tab));
-   
-    }else {
+    } else {
+        // for (let i = 0; i < tab.length; i++) {
+        //     if (tab[i].id === m.id) {
+        //         tab = JSON.parse(localStorage.getItem('listM'));
+        //         tab.push(m);
+        //         localStorage.setItem('listM', JSON.stringify(tab));
+        //     }
+        // }
         tab = JSON.parse(localStorage.getItem('listM'));
         tab.push(m);
         localStorage.setItem('listM', JSON.stringify(tab));
-
-        for (let i = 0; i < tab.length; i++) {
-            if (tab[i].id === m.id) {
-                alert("il est déjà dans les favoris");
-                tab.splice(i, 1);
-                i--;
-            }else{
-                alert("il n'est pas dans vos favoris");
-            }
-            // else{
-            //     tab.push(m);
-            //     localStorage.setItem('listM', JSON.stringify(tab));
-            // }
-        }
     }
 
-    
+
+
 });
