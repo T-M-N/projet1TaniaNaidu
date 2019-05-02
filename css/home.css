@@ -1,17 +1,25 @@
-#intro {
-    background: rgba(106, 134, 187, 0.1);
-    margin: 2em 2em;
-    padding: 2em 2em;
-}
-
 h2 {
     text-align: center;
 }
 
 #hasard{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.conatiner{
+    margin:0;
+}
+.main{
+    padding-top 2.5em;
+}
+
+.btn-refresh {
+    padding: 0.5em;
+    background: #6a86bb;
+    color: #ffffff;
+    border: 1px solid #6a86bb;
 }
