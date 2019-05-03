@@ -16,7 +16,7 @@ $(document).ready(function () {
                   <audio controls src="${m.preview}" width="700" height="350"></audio>
               </div><br>
               <button type="submit" class="btn-favoris">
-                  <i class="fas fa-heart"></i>
+              <i class="fas fa-heart-broken"></i>
                   <span class="text-favoris">Retirer des favoris</span>
               </button>
           </div>
@@ -39,7 +39,6 @@ $(document).ready(function () {
       if (tab[i].id === m.id) {
         tab.splice(i, 1);
         i--;
-        // localStorage.removeItem('listM');
       }
     }
 
