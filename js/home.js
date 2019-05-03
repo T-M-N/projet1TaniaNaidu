@@ -1,6 +1,7 @@
+'use strict';
 $(document).ready(function () {
     $("#hasard").html(
-        `<button type="submit" class="btn-refresh"><i class="fas fa-heart-broken"></i> Choisir une autre musique</button>`
+        `<button type="submit" class="btnRefresh"><i class="fas fa-heart-broken"></i> Choisir une autre musique</button>`
     );
 
     function aleatoire() {
@@ -25,9 +26,8 @@ $(document).ready(function () {
                      <div class="preview">
                          <audio controls src="${m.preview}" width="700" height="350"></audio>
                      </div><br>
-                        <button type="submit" class="btn-favoris">
-                        <i class="fas fa-heart-broken"></i>
-                        <span class="text-favoris">Retirer des favoris</span>
+                    <button type="submit" class="btnFavoris">
+                        <i class="fas fa-heart-broken"></i> Retirer des favoris
                     </button>
                         </div>
                     </div>`)
@@ -38,8 +38,11 @@ $(document).ready(function () {
 
     }
 
+    $("#hasard").on("click", ".btnFavoris", fonctionBtnRetirerHome);
+
     aleatoire();
 
-    $("#hasard").on("click",  aleatoire);
+    $("#hasard").on("click", ".btnRefresh", aleatoire);
+
 
 });
