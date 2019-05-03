@@ -39,11 +39,11 @@ label {
   margin: 1em 0em;
 }
 
-.bouton1, .champsRecherche, select {
+.boutonRecherche, .champsRecherche, select {
   margin: 1em 0em;
 }
 
-.bouton1 {
+.boutonRecherche {
   margin: 1em 0em;
   background-color: #6a86bb;
   color: #ffffff;
@@ -51,7 +51,7 @@ label {
   padding: 0.5em 1em;
 }
 
-.bouton1:hover {
+.boutonRecherche:hover {
   background-color: #333333;
   border: 2px solid #333333;
   color: #ffffff;
