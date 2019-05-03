@@ -1,7 +1,4 @@
-# projet1TaniaNaidu
-Projet 1 dev front
-
-<h1>Application web : Deezer web</h1>
+# Application web : Deezer web
 <p><em>(API Deezer for developers)</em></p>
 
 <h2>Installation</h2>
