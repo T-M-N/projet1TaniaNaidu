@@ -68,40 +68,26 @@ nav {
     padding: 2.5em 0em;
 }
 
-.btn-favoris, .btn-refresh {
+.btnFavoris{
     padding: 0.5em;
     background: red;
     color: #ffffff;
     border: 1px solid red;
 }
 
-.btn-favoris .fa-heart {
+.btnFavoris .fa-heart {
     color: #ffffff;
 }
 
-.display-favoris {
-    display: none;
-}
-
 .container{
-    /* border: 1px solid #6a86bb; */
     margin:1em;
 }
 
-/* .album{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.enligne{
-    margin: 1em;
-} */
 .main{
     background-color:rgba(106, 134, 187, 0.1);
-    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
 }
-.main, .album, .preview, .btn-favoris {
+
+.main, .album, .preview, .btnFavoris {
     margin: auto;
     text-align: center;
     font-size: 13px;
@@ -132,7 +118,7 @@ audio{
 }
 
 #intro {
-    background:url(../image/fond.png) right top no-repeat rgba(106, 134, 187, 0.1);
+  background:url(../image/fond.png) right top no-repeat rgba(106, 134, 187, 0.1);
   background-size: 60%;
   margin: 2em 2em;
   padding: 2em 2em;
